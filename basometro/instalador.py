@@ -247,13 +247,13 @@ def instalar_basometro():
 
   # Coleta dados da API
   current_year = datetime.datetime.now().year
-  database = coletar_dados_api(start_year = 2003,
+  database = coletar_dados_api(start_year = 2018,
                                end_year   = current_year,
                                keep_all   = False)
 
   # Preenche banco de dados com votações faltantes
-  print("Agora vamos obter as votações por chamada.")
-  database = obter_votacoes_faltantes(database = database)
+  ######print("Agora vamos obter as votações por chamada.")
+  #######database = obter_votacoes_faltantes(database = database)
 
   # Salva banco de dados em formato csv
   df_path = "./database/basometro.csv"
